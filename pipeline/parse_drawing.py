@@ -14,7 +14,7 @@ import base64
 import json
 import os
 
-# page -> operation number for CE21609 (1-indexed; page 1 is the John-Deere cover).
+# page -> operation number for CE21609 (1-indexed; page 1 is the title/cover page).
 # Drawing pages follow the process flow, one stage drawing per operation.
 PAGE_TO_OP = {
     2: 10, 3: 20, 4: 30, 5: 40, 6: 50, 7: 60, 8: 70, 9: 90, 10: 100, 11: 110,

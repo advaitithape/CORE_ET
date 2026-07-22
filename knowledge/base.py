@@ -69,7 +69,7 @@ def _ce21609_canonical():
                         "rpn": l["rpn"], "recommended_action": l["recommended_action"]})
     return {
         "meta": {"part_no": "CE21609", "part_name": pfd["meta"].get("part_name", "Pinion Shaft"),
-                 "customer": "John Deere", "supplier": "DAVI Engineering Pvt. Ltd.",
+                 "customer": "Agri-Equipment OEM", "supplier": "Precision Machining Plant",
                  "material": "SAE 8620 (Alloy Steel)", "process_type": "Machining"},
         "operations": list(ops.values()), "failure_modes": fms,
     }

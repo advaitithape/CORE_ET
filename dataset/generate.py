@@ -1,7 +1,7 @@
 """Emit filled demo documents (xlsx + docx) for parts 2 & 3 from canonical data.
 
 Produces professional-looking files under data/generated/<part_no>/ that mirror the
-real DAVI / Shivkrupa QMS templates — used for the Documents view, the upload demo,
+plant's real QMS template formats — used for the Documents view, the upload demo,
 and repository credibility. The running system reads the canonical data in parts.py
 directly, so these files never need to round-trip through a parser.
 """

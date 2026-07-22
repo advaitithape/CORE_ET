@@ -17,8 +17,8 @@ and flow through the same pipeline; Part 1's APQP comes from its real files.
 BASE = {
     "part_no": "S-10254-5",
     "part_name": "Base",
-    "customer": "Four Front Pvt. Ltd.",
-    "supplier": "Shivkrupa Industries",
+    "customer": "Industrial Equipment OEM",
+    "supplier": "Casting & Forging Plant",
     "material": "ADC 12 (Aluminium alloy)",
     "process_type": "High Pressure Die Casting",
     "operations": [
@@ -119,8 +119,8 @@ BASE = {
 YOKE = {
     "part_no": "YF-4021",
     "part_name": "Yoke Flange",
-    "customer": "Tata Motors Ltd.",
-    "supplier": "Shivkrupa Industries",
+    "customer": "Automotive OEM",
+    "supplier": "Casting & Forging Plant",
     "material": "EN8D (Carbon Steel)",
     "process_type": "Forging + Machining",
     "operations": [
@@ -191,19 +191,19 @@ YOKE = {
 
 # Inward inspection (incoming raw material / bought-out)
 INWARD = {
-    "S-10254-5": {"supplier": "Metalex Alloys", "date": "2026-06-12", "material": "ADC12 ingot",
+    "S-10254-5": {"supplier": "Alloy Ingot Supplier", "date": "2026-06-12", "material": "ADC12 ingot",
         "params": [
             {"param": "Chemical composition (Si)", "spec": "9.6-12.0 %", "mode": "Spectro", "obs": ["10.8", "10.9", "10.7"], "status": "Accepted"},
             {"param": "Ingot cleanliness", "spec": "Free from dross", "mode": "Visual", "obs": ["OK", "OK", "OK"], "status": "Accepted"},
             {"param": "Ingot weight", "spec": "6-8 kg", "mode": "Weigh scale", "obs": ["7.1", "7.0", "7.2"], "status": "Accepted"},
         ]},
-    "YF-4021": {"supplier": "Sunflag Iron & Steel", "date": "2026-06-15", "material": "EN8D bar Ø55",
+    "YF-4021": {"supplier": "Steel Bar Supplier", "date": "2026-06-15", "material": "EN8D bar Ø55",
         "params": [
             {"param": "Bar diameter", "spec": "Ø55±0.5 mm", "mode": "Vernier", "obs": ["55.1", "54.9", "55.0"], "status": "Accepted"},
             {"param": "Chemistry (C%)", "spec": "0.35-0.45", "mode": "Mill TC", "obs": ["0.41", "0.40", "0.42"], "status": "Accepted"},
             {"param": "Surface (seams/cracks)", "spec": "Nil", "mode": "MPI", "obs": ["OK", "OK", "Seam"], "status": "Rejected"},
         ]},
-    "CE21609": {"supplier": "Mukand Ltd.", "date": "2026-06-10", "material": "SAE8620 bar Ø30/32",
+    "CE21609": {"supplier": "Alloy Steel Supplier", "date": "2026-06-10", "material": "SAE8620 bar Ø30/32",
         "params": [
             {"param": "Diameter", "spec": "Ø30/32 mm", "mode": "Vernier", "obs": ["31.0", "31.1", "30.9"], "status": "Accepted"},
             {"param": "Grain size", "spec": "5-8 (E112)", "mode": "Microscope", "obs": ["6", "7", "6"], "status": "Accepted"},
@@ -261,7 +261,7 @@ NCRS = [
 # 8D CAPA — root-cause / corrective-action reports (linked to NCRs)
 CAPAS = [
     {"part_no": "S-10254-5", "notification_no": "NCR-BASE-014", "date": "2026-06-22", "part_name": "Base",
-     "customer": "Four Front Pvt. Ltd.",
+     "customer": "Industrial Equipment OEM",
      "team": ["QA Engineer (lead)", "PDC Supervisor", "Maintenance", "Foundry Metallurgist"],
      "problem": {"what": "Coolant/oil leak from boss in customer assembly",
                  "why": "Sub-surface gas porosity connects to machined boss face",
@@ -273,7 +273,7 @@ CAPAS = [
      "preventive_action": "Add degassing time & die temp to the reaction plan and control plan; link leak rejects to melt records",
      "status": "In Progress"},
     {"part_no": "YF-4021", "notification_no": "NCR-YF-007", "date": "2026-06-26", "part_name": "Yoke Flange",
-     "customer": "Tata Motors Ltd.",
+     "customer": "Automotive OEM",
      "team": ["QA Engineer (lead)", "CNC Setter", "Tooling", "Production"],
      "problem": {"what": "Spigot diameter oversize beyond Ø80.00", "why": "Insert wear not detected in time",
                  "when": "June 2026", "where": "Op 40 CNC turning", "who": "Machining", "how": "Air gauge, SPC drift",
