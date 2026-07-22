@@ -1,0 +1,12 @@
+# Local / on-prem deployment: backend in a container, state persisted on the host.
+# Documents stay on YOUR machine — mount nothing you don't want the container to see.
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}   # export it or use a local .env (never commit)
+    volumes:
+      - ./outputs:/app/outputs             # ingestion manifest + embedding cache persist
+      - ./data/uploads:/app/data/uploads   # uploaded documents persist

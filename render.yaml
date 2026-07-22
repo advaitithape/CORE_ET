@@ -1,0 +1,14 @@
+# Render blueprint — deploys the backend (code only, no documents).
+# Frontend goes to Vercel with NEXT_PUBLIC_API_BASE pointing at this service.
+services:
+  - type: web
+    name: core-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # set the value in the Render dashboard — never commit it
+      - key: PYTHON_VERSION
+        value: "3.12"

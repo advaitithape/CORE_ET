@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Industrial HMI theme — light, high-contrast, shop-floor legible ── */
+:root{
+  --bg:#e7ecf1;          /* steel grey desk */
+  --panel:#ffffff;
+  --panel-2:#f2f5f8;
+  --line:#b7c2cd;
+  --line-2:#d4dce3;
+  --ink:#1b2733;
+  --ink-2:#4a5a6a;
+  --muted:#6b7a89;
+  --steel:#22384c;       /* title bar */
+  --blue:#1f6feb;        /* primary action */
+  --blue-d:#1a5bc4;
+  --amber:#c9861a;
+  --red:#c8302f;
+  --green:#1f8a4c;
+  --green-l:#e5f3ea;
+  --amber-l:#fbf1dc;
+  --red-l:#fbe6e6;
+  --blue-l:#e4eefc;
+}
+*{box-sizing:border-box}
+html,body{max-width:100vw;overflow-x:hidden;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;font-size:14px}
+.mono{font-family:"Consolas","SF Mono",ui-monospace,monospace}
+.muted{color:var(--muted)}
+
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-thumb{background:#b7c2cd;border:2px solid var(--bg);border-radius:2px}
+::-webkit-scrollbar-track{background:var(--panel-2)}
+
+@layer components{
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:4px}
+  .panel-inset{background:var(--panel-2);border:1px solid var(--line-2);border-radius:3px}
+  .hbtn{border:1px solid var(--line);background:linear-gradient(#fff,#eef2f6);
+    border-radius:3px;padding:8px 14px;font-weight:600;color:var(--ink);cursor:pointer}
+  .hbtn:hover{border-color:var(--blue);color:var(--blue-d)}
+  .hbtn-primary{border:1px solid var(--blue-d);background:linear-gradient(#3f86f5,#1f6feb);
+    color:#fff;border-radius:3px;padding:8px 16px;font-weight:700;cursor:pointer}
+  .hbtn-primary:hover{background:linear-gradient(#2f78ef,#1a5bc4)}
+  .tab{padding:9px 18px;font-weight:700;letter-spacing:.02em;border-right:1px solid #33485c;
+    color:#c3d0dd;cursor:pointer;background:transparent;text-transform:uppercase;font-size:12.5px}
+  .tab:hover{background:#2c4358;color:#fff}
+  .tab-active{background:var(--bg);color:var(--steel)}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
+    padding:2px 8px;border-radius:3px;border:1px solid var(--line-2);text-transform:uppercase}
+  .led{width:9px;height:9px;border-radius:50%;display:inline-block;box-shadow:0 0 0 1px rgba(0,0,0,.15) inset}
+}
+.sev-high{color:var(--red)} .sev-medium{color:var(--amber)} .sev-low{color:var(--blue)} .sev-info{color:var(--green)}
+.bg-high{background:var(--red-l);border-color:#e6a8a8}
+.bg-medium{background:var(--amber-l);border-color:#e6cd93}
+.bg-low{background:var(--blue-l);border-color:#a9cbf5}
+.bg-info{background:var(--green-l);border-color:#a9d9bd}
+table{border-collapse:collapse;width:100%}
+.hgrid th{background:var(--panel-2);border:1px solid var(--line-2);padding:6px 9px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.02em;color:var(--ink-2)}
+.hgrid td{border:1px solid var(--line-2);padding:6px 9px;font-size:13px;vertical-align:top}
+.hgrid tr:nth-child(even) td{background:#fafcfe}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.fade{animation:fade .2s ease both}
+
+/* ── mobile ── */
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{scrollbar-width:none}
+@media (max-width:640px){
+  .tab{padding:9px 11px;font-size:11.5px}
+  .hbtn,.hbtn-primary{padding:8px 11px;font-size:13px}
+  .hgrid th,.hgrid td{padding:5px 6px;font-size:12px}
+}

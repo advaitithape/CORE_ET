@@ -1,0 +1,17 @@
+# never bake plant documents or secrets into the image
+data/
+backend/.env
+outputs/
+
+# local/dev
+frontend/
+pdf/
+docs/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.git/
+*.bat
+reset.py
