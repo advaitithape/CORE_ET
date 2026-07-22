@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className="ml-auto flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] shrink-0">
             <span className="flex items-center gap-1"><i className="led" style={{ background: system?.llm_key ? "#37d67a" : "#c9861a" }} />
-              <span className="hidden xs:inline">{system ? (system.llm_key ? "LLM ONLINE" : "FALLBACK") : "…"}</span></span>
+              <span className="hidden sm:inline">{system ? (system.llm_key ? "LLM ONLINE" : "FALLBACK") : "…"}</span></span>
             <span className="flex items-center gap-1"><i className="led" style={{ background: err ? "#c8302f" : "#37d67a" }} />
               {err ? "OFFLINE" : "OK"}</span>
           </div>
