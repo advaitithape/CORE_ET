@@ -33,10 +33,10 @@ export default function Home() {
       {/* HMI title bar */}
       <header className="bg-[var(--steel)] text-white shrink-0">
         <div className="px-3 sm:px-4 py-2 flex items-center gap-2 sm:gap-3">
-          <div className="w-7 h-7 shrink-0 border-2 border-white/70 flex items-center justify-center font-black text-sm">IK</div>
+          <div className="w-7 h-7 shrink-0 border-2 border-white/70 flex items-center justify-center font-black text-sm">C</div>
           <div className="min-w-0">
-            <div className="font-bold leading-tight tracking-wide text-[13px] sm:text-base truncate">INDUSTRIAL KNOWLEDGE INTELLIGENCE</div>
-            <div className="hidden sm:block text-[11px] text-white/70 leading-tight">Unified Asset &amp; Operations Brain · APQP Digital Thread + QMS</div>
+            <div className="font-bold leading-tight tracking-wide text-[13px] sm:text-base truncate">CORE</div>
+            <div className="hidden sm:block text-[11px] text-white/70 leading-tight">Cognitive Operations &amp; Reliability Engine · Unified Asset &amp; Operations Brain</div>
           </div>
           <div className="ml-auto flex items-center gap-2 sm:gap-3 text-[10px] sm:text-[11px] shrink-0">
             <span className="flex items-center gap-1"><i className="led" style={{ background: system?.llm_key ? "#37d67a" : "#c9861a" }} />
